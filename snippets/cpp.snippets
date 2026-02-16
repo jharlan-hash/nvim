@@ -1,0 +1,164 @@
+## Access Specifiers
+snippet pu
+    public:
+snippet pr
+    private:
+snippet pro
+    protected:
+
+## Includes
+snippet inc
+    #include <${1:iostream}>
+snippet incs
+    #include <string>
+snippet incv
+    #include <vector>
+snippet inci
+    #include <iomanip>
+snippet incm
+    #include <map>
+snippet incu
+    #include <unordered_map>
+snippet incs
+    #include <set>
+snippet inca
+    #include <algorithm>
+
+## Namespace
+snippet ns
+    namespace ${1:name} {
+        ${0}
+    }
+
+snippet us
+    using namespace ${1:std};
+
+## Class
+snippet cl
+    class ${1:ClassName} {
+    public:
+        ${1}();
+        ~${1}();
+
+    private:
+        ${0}
+    };
+
+## Struct
+snippet st
+    struct ${1:StructName} {
+        ${0}
+    };
+
+## Main Function
+snippet main
+    int main() {
+        ${0}
+        return 0;
+    }
+
+## Control Statements
+snippet if
+    if (${1:condition}) {
+        ${0}
+    }
+snippet eif
+    else if (${1:condition}) {
+        ${0}
+    }
+snippet el
+    else {
+        ${0}
+    }
+snippet sw
+    switch (${1:var}) {
+        case ${2:value}:
+            ${0}
+            break;
+        default:
+            break;
+    }
+snippet for
+    for (${1:int i = 0}; ${2:i < n}; ${3:++i}) {
+        ${0}
+    }
+snippet wh
+    while (${1:condition}) {
+        ${0}
+    }
+
+## Functions
+snippet fn
+    ${1:void} ${2:functionName}(${3}) {
+        ${0}
+    }
+
+## Print Statements
+snippet cout
+    std::cout << ${1:""} << std::endl;
+snippet cerr
+    std::cerr << ${1:"Error"} << std::endl;
+
+## STL Containers
+snippet vec
+    std::vector<${1:int}> ${2:vec};
+snippet map
+    std::map<${1:string}, ${2:int}> ${3:m};
+snippet umap
+    std::unordered_map<${1:string}, ${2:int}> ${3:um};
+snippet set
+    std::set<${1:int}> ${2:s};
+snippet pair
+    std::pair<${1:int}, ${2:string}> ${3:p};
+
+## Iterators
+snippet it
+    for (auto ${1:it} = ${2:container}.begin(); ${1} != ${2}.end(); ++${1}) {
+        ${0}
+    }
+snippet forr
+    for (const auto& ${1:item} : ${2:container}) {
+        ${0}
+    }
+
+## Exception Handling
+snippet try
+    try {
+        ${0}
+    } catch (const std::exception& e) {
+        std::cerr << "Exception: " << e.what() << std::endl;
+    }
+
+## Smart Pointers
+snippet up
+    std::unique_ptr<${1:Type}> ${2:ptr} = std::make_unique<${1}>(${3});
+snippet sp
+    std::shared_ptr<${1:Type}> ${2:ptr} = std::make_shared<${1}>(${3});
+
+## Lambda
+snippet lam
+    auto ${1:func} =  -> ${3:void} {
+        ${0}
+    };
+
+## Constexpr
+snippet cx
+    constexpr ${1:int} ${2:val} = ${3:0};
+
+## Template
+snippet tmpl
+    template <typename ${1:T}>
+    ${0}
+
+## Return
+snippet ret
+    return ${0};
+
+## Comment
+snippet //
+    // ${0}
+snippet /*
+    /*
+     * ${0}
+     */
+
